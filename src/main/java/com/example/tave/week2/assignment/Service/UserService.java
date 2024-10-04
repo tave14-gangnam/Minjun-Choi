@@ -25,7 +25,7 @@ public class UserService {
     *
     *
     * */
-    @Transactional
+    @Transactional(readOnly = true)
     // 작업을 단위별로
     public void createUser(UserCreateRequest request){
         log.info("서비스 들어왔습니다.");
